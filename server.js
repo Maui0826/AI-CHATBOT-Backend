@@ -8,7 +8,7 @@ const generateChat = require('./generateChat.js');
 dotenv.config();
 
 const corsOptions = {
-  origin: ['http://localhost:5173'],
+  origin: ['http://localhost:5173', 'https://valnat-chatbot.vercel.app/'],
 };
 
 app.use(cors(corsOptions));
