@@ -1118,9 +1118,11 @@ const generateChat = async (req, res, next) => {
 
   try {
     const { question } = req.body;
+
     const result = await chatSession.sendMessage(question);
     // TODO: Following code needs to be updated for client-side apps.
     const candidates = result.response.candidates;
+
     for (
       let candidate_index = 0;
       candidate_index < candidates.length;
